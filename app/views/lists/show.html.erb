@@ -6,7 +6,7 @@
 <ul>
   <% @list.movies.each do |movie| %>
     <% bookmark = Bookmark.find_by(list: @list, movie: movie) %>
-    <li><%= movie.poster_url %> </li>
+    <li><%= image_tag movie.poster_url %> </li>
     <li><%= movie.title %> </li>
     <li><%= movie.rating %> </li>
     <li><%= movie.overview %> </li>
