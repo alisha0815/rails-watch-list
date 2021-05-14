@@ -1,8 +1,12 @@
 <h1>Movie Lists</h1>
 
+<%= cl_image_tag("bnjmpbyy87zfkgejmuo1",
+      width: 400, height: 300, crop: :fill) %>
+
 <ul>
   <% @lists.each do |list| %>
     <li><%= link_to list.name, list_path(list) %> </li>
+    <li><%= cl_image_tag list.photo.key, height: 100, width: 200, crop: :fill %></li>
   <% end %>
 </ul>
 
